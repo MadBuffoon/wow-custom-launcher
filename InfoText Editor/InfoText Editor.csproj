@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <RootNamespace>InfoText_Editor</RootNamespace>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\HtmlSyntaxHighlighting.xshd" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="HtmlSyntaxHighlighting.xshd" />
+      <EmbeddedResource Include="HtmlSyntaxHighlighting.xshd" />
+    </ItemGroup>
+
+</Project>

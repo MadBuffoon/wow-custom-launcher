@@ -10,10 +10,15 @@
         <RuntimeIdentifier>win-x64</RuntimeIdentifier>
         <SelfContained>true</SelfContained>
         <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <DebugType>none</DebugType>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="K4os.Hash.xxHash" Version="1.0.8" />
+    </ItemGroup>
 
 </Project>

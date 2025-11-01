@@ -1,0 +1,38 @@
+<SyntaxDefinition name="HTML" extensions=".html;.htm">
+  <Color name="Comment" foreground="Green" />
+  <Color name="Tag" foreground="Blue" />
+  <Color name="Attribute" foreground="Red" />
+  <Color name="AttributeValue" foreground="Blue" />
+  <Color name="Text" foreground="Black" />
+
+  <RuleSets>
+    <RuleSet>
+      <Span color="Comment" multiline="true">
+        <Begin><![CDATA[<!--]]></Begin>
+        <End><![CDATA[-->]]></End>
+      </Span>
+      <Span color="Tag">
+        <Begin><![CDATA[<]]></Begin>
+        <End><![CDATA[>]]></End>
+        <RuleSet>
+          <Span color="AttributeValue">
+            <Begin>"</Begin>
+            <End>"</End>
+          </Span>
+          <Words color="Attribute">
+            <Word name="html" />
+            <Word name="head" />
+            <Word name="title" />
+            <Word name="body" />
+            <Word name="style" />
+            <Word name="meta" />
+            <Word name="div" />
+            <Word name="span" />
+            <Word name="a" />
+            <Word name="p" />
+          </Words>
+        </RuleSet>
+      </Span>
+    </RuleSet>
+  </RuleSets>
+</SyntaxDefinition>
